@@ -39,6 +39,50 @@ function theme_js() {
 
 add_action( 'wp_enqueue_scripts', 'theme_js');
 
+
+add_action( 'init', 'portfolio_init' );
+/**
+ * Register a book post type.
+ *
+ * @link http://codex.wordpress.org/Function_Reference/register_post_type
+ */
+function portfolio_init() {
+	$labels = array(
+		'name'               => _x( 'Portfolio', 'post type general name' ),
+		'singular_name'      => _x( 'Item', 'post type singular name' ),
+		'menu_name'          => _x( 'Portfolio', 'admin menu' ),
+		'name_admin_bar'     => _x( 'Item', 'add new on admin bar' ),
+		'add_new'            => _x( 'Add Item', 'item' ),
+		'add_new_item'       => __( 'Add Item' ),
+		'new_item'           => __( 'New Item' ),
+		'edit_item'          => __( 'Edit Item' ),
+		'view_item'          => __( 'View Item' ),
+		'all_items'          => __( 'All Items' ),
+		'search_items'       => __( 'Search Items' ),
+		'parent_item_colon'  => __( 'Parent Items:' ),
+		'not_found'          => __( 'No items found.' ),
+		'not_found_in_trash' => __( 'No items found in Trash.' )
+	);
+
+	$args = array(
+		'labels'             => $labels,
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'item' ),
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => null,
+		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
+	);
+
+	register_post_type( 'portfolio', $args );
+}
+
+
 function tyler_setup() {
 
 	/*

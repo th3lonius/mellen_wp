@@ -1,0 +1,69 @@
+/*TRANSITIONS*/
+@mixin transition ($property, $duration, $easing, $delay) {
+    transition: $property $duration $easing $delay;
+    -moz-transition: $property $duration $easing $delay;
+    -webkit-transition: $property $duration $easing $delay;
+}
+
+/*BREAKPOINTS*/
+$break-small: 500px;
+$break-large: 1024px;
+
+@mixin respond-to($media) {
+  @if $media == mobile {
+    @media only screen and (max-width: $break-small) { @content; }
+  }
+  @else if $media == medium-screen {
+    @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) { @content; }
+  }
+  @else if $media == wide-screen {
+    @media only screen and (min-width: $break-large) { @content; }
+  }
+}
+
+/*ANIMATIONS*/
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes $animation-name {
+        @content;
+    }
+    @-moz-keyframes $animation-name {
+        @content;
+    }
+    @keyframes $animation-name {
+        @content;
+    }
+}
+
+@mixin animation($str) {
+    -webkit-animation: #{$str};
+    -moz-animation: #{$str};
+    animation: #{$str};
+}
+
+/*BOXSHADOW*/
+@mixin box-shadow( $horiz, $vert, $blur, $spread, $color ){
+  -webkit-box-shadow: $horiz $vert $blur $spread $color;
+  -moz-box-shadow: $horiz $vert $blur $spread $color;
+  box-shadow: $horiz $vert $blur $spread $color;
+}
+
+/*IMAGEBLUR*/
+@mixin imgblur($radius) {
+	-webkit-filter: blur($radius+px); -moz-filter: blur($radius+px);
+	-o-filter: blur($radius+px); -ms-filter: blur($radius+px);
+	filter: url(images/blur.svg#blur); filter: blur($radius+px); filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='$radius');
+}
+
+/*IMAGEGRAYSCALE*/
+@mixin grayscale {
+    -webkit-filter: grayscale(100%);
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
+    filter: gray; /* IE6-9 */
+}
+
+@mixin fullcolor {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
+    -webkit-filter: grayscale(0%);
+}
+
+

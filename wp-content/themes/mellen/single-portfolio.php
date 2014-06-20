@@ -1,10 +1,8 @@
 <?php
 
-/* Template Name: Work Page */
+/* Template Name: Portfolio Page */
 
 get_header(); ?>
-
-<?php get_template_part( 'exhibition', 'list' ); ?>
 
     <section id="content" role="main">
 
@@ -58,8 +56,5 @@ get_header(); ?>
 
 	</section><!-- #content -->
 
-    <?php get_template_part( 'left', 'none' ); ?>
-
-	<?php get_template_part( 'right', 'none' ); ?>
 
 <?php get_footer(); ?>
