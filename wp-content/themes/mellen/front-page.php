@@ -1,9 +1,10 @@
 <?php get_header(); ?>
 
-<?php get_template_part( 'content', 'about' ); ?>
+<!-- #PORTFOLIO -->
+<article id="portfolio">
 
-<?php get_template_part( 'content', 'about' ); ?>
-
-<?php get_template_part( 'content', 'contact' ); ?>
+    <?php get_template_part( 'portfolio', 'list' ); ?>
+    
+</article>
 
 <?php get_footer(); ?>

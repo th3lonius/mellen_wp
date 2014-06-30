@@ -1,7 +1,7 @@
 /*
-Theme Name: Tyler
-Theme URI: http://tylercochran.com
-Description: A custom Wordpress portfolio site for Tyler Cochran
+Theme Name: Mellen
+Theme URI: http://creativemellen.com
+Description: A custom Wordpress portfolio site for Kevin Mellen
 Author: Matthew Mesaros
 Version: 1.0
 
@@ -13,168 +13,21 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 @import 'base';
 @import 'mixins';
 
-@mixin block-rel {
-    display: block;
-    position: relative;
-}
-@mixin block-ab {
-    display: block;
-    position: absolute;
-}
-@mixin inline-rel {
-    display: inline-block;
-    position: relative;
-}
-@mixin trans-one {
-    transition: .1s all;
-    -moz-transition: .1s all;
-    -webkit-transition: .1s all;
-    transition-delay: .1s;
-    -moz-transition-delay: .1s;
-    -webkit-transition-delay: .1s;
-}
-@mixin trans-two {
-    transition: .3s all;
-    -moz-transition: .3s all;
-    -webkit-transition: .3s all;
-    transition-delay: .1s;
-    -moz-transition-delay: .1s;
-    -webkit-transition-delay: .1s;
-}
-@mixin trans-three {
-    transition: ease .3s all;
-    -moz-transition: ease .3s all;
-    -webkit-transition: ease .3s all;
-}
-@mixin h1 {
-    font-family: $title-font;
-    font-size: 40px;
-    font-weight: 500;
-	letter-spacing: 1px;
-    line-height: 40px;
-    color: $black;
-}
-@mixin h2 {
-    font-family: $title-font;
-    font-size: 40px;
-    font-weight: 500;
-    line-height: 40px;
-    color: $black;
-}
-@mixin h2-alt {
-    font-family: $display-font;
-    font-size: 26px;
-    font-weight: 100;
-    line-height: 26px;
-    color: $black;
-}
-@mixin h3 {
-	display: inline-block;
-    font-family: $title-font;
-    font-size: 2em;
-    font-weight: 300;
-	letter-spacing: 1px;
-    line-height: 1.2;
-    color: $white;
-}
-@mixin h3-alt {
-    font-family: $display-font;
-    font-size: 20px;
-    font-weight: 100;
-    line-height: 26px;
-    color: $white;
-}
-@mixin h4 {
-    font-family: $title-font;
-    font-size: 1em;
-    font-weight: 100;
-	letter-spacing: 2px;
-    line-height: 20px;
-    color: $white;
-	text-transform: uppercase;
-}
-@mixin p {
-    font-family: $display-font;
-    font-size: 16px;
-    font-weight: 100;
-    line-height: 1.4;
-    margin-bottom: 1em;
-    color: $black;
-}
-@mixin p-alt {
-    font-family: $title-font;
-    font-size: 16px;
-    font-weight: 100;
-    line-height: 16px;
-    color: $black;
+article {
+    margin-top: 5em;
+    padding: 80px;
+    width: 100%; height: 100%;
 }
 
-@mixin grayscale {
-    -webkit-filter: grayscale(100%);
-    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
-    filter: gray; /* IE6-9 */
-}
-
-@mixin fullcolor {
-    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
-    -webkit-filter: grayscale(0%);
-}
-
-@mixin box-shadow( $horiz, $vert, $blur, $spread, $color ){
-  -webkit-box-shadow: $horiz $vert $blur $spread $color;
-  -moz-box-shadow: $horiz $vert $blur $spread $color;
-  box-shadow: $horiz $vert $blur $spread $color;
-}
-
-@mixin imgblur($radius) {
-	-webkit-filter: blur($radius+px); -moz-filter: blur($radius+px);
-	-o-filter: blur($radius+px); -ms-filter: blur($radius+px);
-	filter: url(images/blur.svg#blur); filter: blur($radius+px); filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='$radius');
-}
-
-h1 {
-    @include h1;
-}
-h2 {
-    @include h2;
-}
-.h2-alt {
-    @include h2-alt;
-}
-h3 {
-    @include h3;
-}
-.h3-alt {
-    @include h3-alt;
-}
-h4 {
-	@include h4;
-}
-p {
-    @include p;
-}
-.p-alt {
-    @include p-alt;
-}
-.uppercase {
-    text-transform: uppercase;
-}
-section {
-    @include block-rel;
-    width: 100%;
-    height: 100%;
-}
 figure {
-    @include block-rel;
     width: 100%;
     height: 100%;
     overflow: hidden;
 }
 figcaption {
-    @include block-rel;
+
 }
 main {
-    @include block-rel;
     width: 100%;
     height: 100%;
     z-index: 0;
@@ -182,154 +35,30 @@ main {
 
 /*HEADER*/
 header {
-    position: absolute;
+    @include box-shadow(0, 2px, 5px, 0, rgba(0,0,0,0.3));
+    background: #FFF;
+    position: fixed;
+    top: 0; left: 0; right: 0;
     width: 100%;
-    @include trans-three;
+    z-index: 9999;
     div[role=banner] {
-        @include block-ab;
-        @include trans-one;
-        height: 60px;
+        background-image: url(images/creative_mellen_logo.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 75px;
         left: 70px;
+        position: absolute;
         top: 0;
+        width: 225px; height: 75px;
         z-index: 99;
         &:hover {
-            @include trans-one;
             background-color: $blackbg;
         }
         @include respond-to(mobile) {
             left: 10px;
             top: 60px;
         }
-        h1 {
-            @include block-ab;
-            height: 60px; width: 300px;
-            color: white;
-            overflow: hidden;
-            background-image: url('images/icons/tylerthin.svg');
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: contain;
-            text-transform: uppercase;
-            line-height: 60px;
-        }
     }
-    nav {
-        @include block-rel;
-        background: rgba(26,26,26,0.4);
-        cursor: pointer;
-        top: 0; left: 0;
-        height: 100vh; width: 60px;
-        z-index: 100;
-        &:hover .main-menu {
-            @include trans-one;
-        }
-        @include respond-to(mobile) {
-            height: 60px;
-            width: 100%;
-        }
-        ul {
-            @include block-rel;
-            @include trans-one;
-            top: 0; left: 0;
-            width: 100%;
-            z-index: 1;
-            li {
-                @include block-rel;
-                @include trans-two;
-                width: 100%; height: 60px;
-                color: $white;
-                line-height: 60px;
-                background-repeat: no-repeat;
-                background-position: 10px center;
-                text-indent: 70px;
-                @include respond-to(mobile) {
-                    @include inline-rel;
-                    background-position: center;
-                    width: 24.3%;
-                }
-                &:hover a {
-                    opacity: 1;
-                }
-                a {
-                    @include trans-two;
-                    font-family: $hand-font;
-                    font-size: 1.25em;
-                    font-weight: 400;
-                    height: 100%;
-                    opacity: 0;
-                    -webkit-transform: rotate(5deg);
-                    @include respond-to(mobile) {
-                        text-indent: -9999px;
-                    }
-                }
-			}
-            .home {
-                background-image: url('images/icons/home.svg');
-                background-size: 40px;
-                &:hover {
-                    background-color: #92B540;
-                }
-            }
-            .about-link {
-                background-image: url('images/icons/about.svg');
-                background-size: 40px;
-                &:hover {
-                    background-color: #009BA6;
-                }
-            }
-            .work {
-                background-image: url('images/icons/work.svg');
-                background-size: 40px;
-                &:hover {
-                    background-color: #CD4D58;
-                }
-            }
-            .exhibitions-link {
-                background-image: url('images/icons/exhibitions.svg');
-                background-position: 12px center;
-                background-size: 36px;
-                &:hover {
-                    background-color: #CD4D58;
-                }
-            }
-            .links {
-                background-image: url('images/icons/links.svg');
-                background-size: 40px;
-                &:hover { 
-                    background-color: #CDC638;
-                }
-            }
-            .twitter {
-                background-image: url('images/icons/twitter.svg');
-                background-size: 50%;
-                &:hover {
-                    background-color: #009BA6;
-                }
-            }
-            .linkedin {
-                background-image: url('images/icons/linkedin.svg');
-                background-size: 50%;
-                &:hover {
-                    background-color: #009BA6;
-                }
-            }
-            .facebook {
-                background-image: url('images/icons/facebook.svg');
-                background-position: 21px center;
-                background-size: 16px;
-                &:hover {
-                    background-color: #009BA6;
-                }
-            }
-        }
-		ul.social-links {
-			@include block-ab;
-            bottom: 0; left: 0; top: auto;
-            @include respond-to(mobile) {
-                display: none;
-			}
-		}
-	}
 }
 
 /*MAIN PAGE*/
@@ -337,10 +66,8 @@ header {
 /*END MAIN PAGE*/
 
 
-/*LEFT SECTION*/
-.left {
-    @include block-ab;
-	display: none;
+/*PORTFOLIO SECTION*/
+#portfolio {
     top: 0; bottom: 0; left: 0; right: 0;
 	text-align: center;
     z-index: 100;
@@ -349,7 +76,6 @@ header {
         width: 100%;
     }
 	nav {
-		@include trans-one;
 		background-color: rgba(26,26,26,0.7);
 		height: 36px;
 		overflow: hidden;
@@ -362,7 +88,6 @@ header {
 		.filters {
 			width: 100%;
 			li {
-				@include trans-two;
 				display: inline-block;
 				&.current {
 					background: hsl(57, 60%, 51%);
@@ -393,30 +118,30 @@ header {
 	}
 	.work-grid {
 		margin: 0 auto;
-		width: 50%;
 		.item {
-			display: none;
-			margin: 1%;
-			opacity: 0;
+            float: left;
 			overflow: hidden;
-			width: 25%;
-			img {
-				position: relative;
-			}
+            padding: 20px;
+            position: relative;
+			width: 50%;
+            a {
+                display: block;
+                height: 100%;
+                padding: 6px 12px;
+                position: absolute;
+                text-align: left;
+                top: 0;	left: 0;
+                img {
+                    position: relative;
+                    width: 100%;
+                }
+            }
 			.label {
 				background: #e95a44;
 				position: absolute;
 				width: 100%;
 				height: 50px;
 				bottom: -50px;
-				a {
-					display: block;
-					height: 100%;
-					padding: 6px 12px;
-					position: absolute;
-					text-align: left;
-					top: 0;	left: 0;
-				}
 			}
 		}
 	}
@@ -424,7 +149,6 @@ header {
 
 
 #colophon{
-    @include block-rel;
     font-size: 1em;
     color: #646464;
     width: 100%;

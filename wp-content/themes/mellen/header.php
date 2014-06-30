@@ -23,6 +23,7 @@
 <body <?php body_class(); ?>>
     
 	<header>
+        <div role="banner"></div>
         <nav>
             <ul class="main-menu">
                 <li class="home"><a href="<?php echo site_url(); ?>">Home</a></li>
@@ -37,6 +38,5 @@
                 <li class="facebook"><a href="">Facebook</a></li>
             </ul>
 		</nav><!-- #site-navigation -->
-		<div role="banner"></div>
 	</header><!-- #masthead -->
 
