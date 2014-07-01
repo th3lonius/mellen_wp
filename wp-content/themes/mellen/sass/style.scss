@@ -10,7 +10,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
 @import 'reset';
+@import 'modular-scale';
 @import 'base';
+@import 'type';
 @import 'mixins';
 
 article {
@@ -117,32 +119,33 @@ header {
 		}
 	}
 	.work-grid {
+		@extend %clearfix;
 		margin: 0 auto;
 		.item {
             float: left;
 			overflow: hidden;
             padding: 20px;
             position: relative;
-			width: 50%;
+			width: 25%;
             a {
                 display: block;
                 height: 100%;
-                padding: 6px 12px;
-                position: absolute;
+                position: relative;
                 text-align: left;
                 top: 0;	left: 0;
                 img {
                     position: relative;
                     width: 100%;
                 }
+				.label {
+					background: #e95a44;
+					padding: 12px;
+					position: absolute;
+					width: 100%;
+					height: 50px;
+					bottom: -50px;
+				}
             }
-			.label {
-				background: #e95a44;
-				position: absolute;
-				width: 100%;
-				height: 50px;
-				bottom: -50px;
-			}
 		}
 	}
 }

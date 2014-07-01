@@ -41,11 +41,8 @@ add_action( 'wp_enqueue_scripts', 'theme_js');
 
 
 add_action( 'init', 'portfolio_init' );
-/**
- * Register a book post type.
- *
- * @link http://codex.wordpress.org/Function_Reference/register_post_type
- */
+add_action( 'init', 'features_init' );
+
 function portfolio_init() {
 	$labels = array(
 		'name'               => _x( 'Portfolio', 'post type general name' ),
@@ -66,21 +63,52 @@ function portfolio_init() {
 
 	$args = array(
 		'labels'             => $labels,
-		'public'             => true,
 		'publicly_queryable' => true,
 		'show_ui'            => true,
+		'show_in_nav_menus'  => true,
 		'show_in_menu'       => true,
-		'query_var'          => true,
 		'rewrite'            => array( 'slug' => 'item' ),
-		'capability_type'    => 'post',
 		'has_archive'        => true,
-		'hierarchical'       => false,
 		'menu_position'      => null,
 		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
         'taxonomies'         => array('category')
 	);
 
 	register_post_type( 'portfolio', $args );
+}
+
+function features_init() {
+	$labels = array(
+		'name'               => _x( 'Features', 'post type general name' ),
+		'singular_name'      => _x( 'Feature', 'post type singular name' ),
+		'menu_name'          => _x( 'Features', 'admin menu' ),
+		'name_admin_bar'     => _x( 'Feature', 'add new on admin bar' ),
+		'add_new'            => _x( 'Add Feature', 'feature' ),
+		'add_new_item'       => __( 'Add Feature' ),
+		'new_item'           => __( 'New Feature' ),
+		'edit_item'          => __( 'Edit Feature' ),
+		'view_item'          => __( 'View Feature' ),
+		'all_items'          => __( 'All Features' ),
+		'search_items'       => __( 'Search Features' ),
+		'parent_item_colon'  => __( 'Parent Features:' ),
+		'not_found'          => __( 'No features found.' ),
+		'not_found_in_trash' => __( 'No features found in Trash.' )
+	);
+
+	$args = array(
+		'labels'             => $labels,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_nav_menus'  => true,
+		'show_in_menu'       => true,
+		'rewrite'            => array( 'slug' => 'item' ),
+		'has_archive'        => true,
+		'menu_position'      => null,
+		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
+        'taxonomies'         => array('category')
+	);
+
+	register_post_type( 'features', $args );
 }
 
 

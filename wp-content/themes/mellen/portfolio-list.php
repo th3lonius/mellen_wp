@@ -40,7 +40,7 @@
             $image = wp_get_attachment_image_src( $first_row_image, $size );
 
         ?>
-        
+       
         <li class="item <?php
         foreach((get_the_category()) as $category) {
         echo $category->category_nicename . ' '; } ?>" data-cat="<?php echo $category->category_nicename . ' '; ?>">
@@ -48,7 +48,7 @@
         		<a href="<?php the_permalink(); ?>">
 					<img src="<?php echo $image[0]; ?>" alt="" />
 					<figcaption class="label">
-						<h3><?php the_title() ;?></h3>
+						<h4><?php the_title() ;?></h4>
 					</figcaption>
 				</a>
 			</figure>

@@ -9,6 +9,13 @@ $title-font: "atrament-web", sans-serif;
 $display-font: "prenton-display", sans-serif;
 $hand-font: "gooddog-new", sans-serif;
 
+html {
+	font-size: 62.5%;
+}
+
 body {
     color: #333;
+	font-size: ms(0);
+	line-height: 1.5;
 }
+
