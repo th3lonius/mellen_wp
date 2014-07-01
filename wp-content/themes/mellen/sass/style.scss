@@ -15,10 +15,15 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 @import 'type';
 @import 'mixins';
 
+.stuck {
+    position: fixed;
+}
+
 article {
-    margin-top: 5em;
-    padding: 80px;
-    width: 100%; height: 100%;
+    @extend %clearfix;
+    margin-top: 1px;
+    position: relative;
+    width: 100%; min-height: 500px;
 }
 
 figure {
@@ -35,8 +40,27 @@ main {
     z-index: 0;
 }
 
+article header {
+    background: hsl(0, 0%, 95%);
+    float: left;
+    height: 100%;
+    padding: ms(1);
+    width: 26%; height: 100%;
+    h3 {
+        color: hsl(13, 51%, 61%);
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+}
+
+article section {
+    float: left;
+    overflow: hidden;
+    width: 74%; height: 100%;
+}
+
 /*HEADER*/
-header {
+body > header {
     @include box-shadow(0, 2px, 5px, 0, rgba(0,0,0,0.3));
     background: #FFF;
     position: fixed;
@@ -47,11 +71,10 @@ header {
         background-image: url(images/creative_mellen_logo.jpg);
         background-repeat: no-repeat;
         background-size: contain;
-        height: 75px;
         left: 70px;
         position: absolute;
         top: 0;
-        width: 225px; height: 75px;
+        width: 225px; height: 50px;
         z-index: 99;
         &:hover {
             background-color: $blackbg;
@@ -60,6 +83,9 @@ header {
             left: 10px;
             top: 60px;
         }
+    }
+    nav {
+        
     }
 }
 
@@ -70,8 +96,6 @@ header {
 
 /*PORTFOLIO SECTION*/
 #portfolio {
-    top: 0; bottom: 0; left: 0; right: 0;
-	text-align: center;
     z-index: 100;
     @include respond-to(mobile) {
         max-width: 100%;

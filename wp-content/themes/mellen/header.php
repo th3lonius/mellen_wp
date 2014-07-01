@@ -32,11 +32,6 @@
                 <li class="exhibitions-link"><a href="">Exhibitions</a></li>
                 <li class="links"><a href="">Events</a></li>
             </ul>
-            <ul class="social-links">
-                <li class="linkedin"><a href="">linkedIn</a></li>
-                <li class="twitter"><a href="">Twitter</a></li>
-                <li class="facebook"><a href="">Facebook</a></li>
-            </ul>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 

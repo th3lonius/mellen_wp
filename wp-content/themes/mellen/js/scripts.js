@@ -1,5 +1,8 @@
 jQuery(document).ready(function($){
 
+$('#portfolio header').waypoint('sticky');
+    
+    
 $('#slides').superslides({
     play: 8000,
 	animation: 'fade',
