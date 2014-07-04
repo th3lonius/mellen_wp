@@ -23,7 +23,8 @@ article {
     @extend %clearfix;
     margin-top: 1px;
     position: relative;
-    width: 100%; min-height: 500px;
+	height: 100vh;
+    width: 100%;
 }
 
 figure {
@@ -43,7 +44,6 @@ main {
 article header {
     background: hsl(0, 0%, 95%);
     float: left;
-    height: 100%;
     padding: ms(1);
     width: 26%; height: 100%;
     h3 {
@@ -90,7 +90,10 @@ body > header {
 }
 
 /*MAIN PAGE*/
-
+#features section {
+	float: none;
+	width: 100%;
+}
 /*END MAIN PAGE*/
 
 
@@ -148,9 +151,9 @@ body > header {
 		.item {
             float: left;
 			overflow: hidden;
-            padding: 20px;
+            padding: ms(1) 0 0 ms(1);
             position: relative;
-			width: 25%;
+			width: 29.03444%;
             a {
                 display: block;
                 height: 100%;

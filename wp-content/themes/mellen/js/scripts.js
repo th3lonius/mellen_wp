@@ -1,6 +1,6 @@
 jQuery(document).ready(function($){
 
-$('#portfolio header').waypoint('sticky');
+
     
     
 $('#slides').superslides({

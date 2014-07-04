@@ -2,9 +2,7 @@
 
 <!-- #FEATURES -->
 <article id="features">
-    
-    <header><h3>Features</h3></header>
-    
+        
     <section>
     
         <?php
