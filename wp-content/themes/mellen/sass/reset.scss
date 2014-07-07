@@ -68,13 +68,6 @@ body, html {
     text-decoration: none;
 }
 
-%clearfix {
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
 
 img {
     max-width: 100%;

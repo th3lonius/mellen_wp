@@ -91,13 +91,6 @@ body, html {
 }
 
 /* line 72, sass/reset.scss */
-article:after, #portfolio .work-grid:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* line 79, sass/reset.scss */
 img {
   max-width: 100%;
   height: auto;
@@ -112,13 +105,13 @@ html {
 body {
   color: #333;
   font-size: 1em;
-  line-height: 1.61803em;
+  line-height: 1.61803;
 }
 
 /* line 7, sass/type.scss */
 h1, h2, h3, h4, h5 {
   font-family: "futura-pt";
-  font-weight: 700;
+  font-weight: 400;
 }
 
 /* line 12, sass/type.scss */
@@ -148,16 +141,46 @@ h5 {
 
 /* line 32, sass/type.scss */
 p {
+  color: #262223;
   font-family: "adelle";
   font-size: 1.61803rem;
+  font-weight: 100;
+  margin-bottom: 2.61803rem;
 }
 
-/*TRANSITIONS*/
+/* line 40, sass/type.scss */
+ul {
+  margin-bottom: 2.61803rem;
+}
+
+/* line 44, sass/type.scss */
+li {
+  color: #262223;
+  font-family: "adelle";
+  font-size: 1.61803rem;
+  font-weight: 100;
+  margin-bottom: 1.61803rem;
+}
+
 /*BREAKPOINTS*/
-/*ANIMATIONS*/
-/*BOXSHADOW*/
-/*IMAGEBLUR*/
+/*---------------- ANIMATIONS ----------------*/
+/*---------------- IMAGES ----------------*/
 /*IMAGEGRAYSCALE*/
+/*IMAGEBLUR*/
+/*IMAGESCALE*/
+/*---------------- COMMON ----------------*/
+/*TRANSLATE*/
+/*TRANSITIONS*/
+/*ROUNDEDEDGES*/
+/*BOXSHADOW*/
+/*CLEARFLOAT*/
+/* line 105, sass/mixins.scss */
+article:after, body > header nav ul:after, .work-grid:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 /* line 18, sass/style.scss */
 .stuck {
   position: fixed;
@@ -167,7 +190,7 @@ p {
 article {
   margin-top: 1px;
   position: relative;
-  height: 100vh;
+  height: 100%;
   width: 100%;
 }
 
@@ -187,86 +210,124 @@ main {
 
 /* line 44, sass/style.scss */
 article header {
-  background: #f2f2f2;
+  background: whitesmoke;
   float: left;
-  padding: 1.61803rem;
+  padding: 4.23607rem;
   width: 26%;
   height: 100%;
 }
 /* line 49, sass/style.scss */
 article header h3 {
-  color: #ce7f69;
+  color: #f6b698;
   font-weight: 300;
   text-transform: uppercase;
 }
 
 /* line 56, sass/style.scss */
 article section {
+  background: #FFF;
   float: left;
-  overflow: hidden;
+  overflow: visible;
+  padding: 4.23607rem;
   width: 74%;
   height: 100%;
 }
 
 /*HEADER*/
-/* line 63, sass/style.scss */
+/* line 67, sass/style.scss */
 body > header {
   -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+  -webkit-transition: top 0.5s ease ;
+  -moz-transition: top 0.5s ease ;
+  -o-transition: top 0.5s ease ;
+  -ms-transition: top 0.5s ease ;
+  transition: top 0.5s ease ;
   background: #FFF;
   position: fixed;
+  text-align: center;
   top: 0;
   left: 0;
   right: 0;
   width: 100%;
+  height: 40px;
   z-index: 9999;
 }
-/* line 70, sass/style.scss */
-body > header div[role=banner] {
-  background-image: url(images/creative_mellen_logo.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  left: 70px;
+/* line 76, sass/style.scss */
+body > header img {
+  width: 50%;
+}
+/* line 82, sass/style.scss */
+body > header nav ul li {
+  float: left;
+  margin-bottom: 0;
+}
+/* line 85, sass/style.scss */
+body > header nav ul li a {
+  color: #262223;
+  font-family: "futura-pt";
+  font-weight: 500;
+  line-height: 40px;
+  padding: 1.61803rem;
+  text-transform: uppercase;
+}
+
+/* line 98, sass/style.scss */
+.nav-up {
+  top: -40px;
+}
+
+/* line 102, sass/style.scss */
+.banner {
+  left: 50%;
+  top: 50%;
   position: absolute;
-  top: 0;
-  width: 225px;
-  height: 50px;
-  z-index: 99;
-}
-/* line 79, sass/style.scss */
-body > header div[role=banner]:hover {
-  background-color: rgba(0, 0, 0, 0.6);
-}
-@media only screen and (max-width: 500px) {
-  /* line 70, sass/style.scss */
-  body > header div[role=banner] {
-    left: 10px;
-    top: 60px;
-  }
+  width: 100px;
+  z-index: 999999;
+  -webkit-transform: translate(-50%, -50%);
 }
 
 /*MAIN PAGE*/
-/* line 93, sass/style.scss */
+/* line 111, sass/style.scss */
 #features section {
   float: none;
+  padding: 0;
   width: 100%;
+}
+/* line 115, sass/style.scss */
+#features section img {
+  display: block;
+  position: relative;
+}
+/* line 119, sass/style.scss */
+#features section::after {
+  content: "";
+  background-image: url(images/pattern-epic.png);
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /*END MAIN PAGE*/
 /*PORTFOLIO SECTION*/
-/* line 101, sass/style.scss */
+/* line 133, sass/style.scss */
 #portfolio {
   z-index: 100;
 }
 @media only screen and (max-width: 500px) {
-  /* line 101, sass/style.scss */
+  /* line 133, sass/style.scss */
   #portfolio {
     max-width: 100%;
     width: 100%;
   }
 }
-/* line 107, sass/style.scss */
+/* line 139, sass/style.scss */
 #portfolio nav {
   background-color: rgba(26, 26, 26, 0.7);
   height: 36px;
@@ -276,27 +337,27 @@ body > header div[role=banner]:hover {
   width: 100px;
   z-index: 99;
 }
-/* line 114, sass/style.scss */
+/* line 146, sass/style.scss */
 #portfolio nav:hover {
   width: 100%;
 }
-/* line 117, sass/style.scss */
+/* line 149, sass/style.scss */
 #portfolio nav .filters {
   width: 100%;
 }
-/* line 119, sass/style.scss */
+/* line 151, sass/style.scss */
 #portfolio nav .filters li {
   display: inline-block;
 }
-/* line 121, sass/style.scss */
+/* line 153, sass/style.scss */
 #portfolio nav .filters li.current {
   background: #cdc637;
 }
-/* line 124, sass/style.scss */
+/* line 156, sass/style.scss */
 #portfolio nav .filters li.current span {
   color: #FFF;
 }
-/* line 127, sass/style.scss */
+/* line 159, sass/style.scss */
 #portfolio nav .filters li span {
   color: white;
   display: block;
@@ -307,30 +368,38 @@ body > header div[role=banner]:hover {
   padding: 0 18px;
   text-transform: uppercase;
 }
-/* line 136, sass/style.scss */
+/* line 168, sass/style.scss */
 #portfolio nav .filters li span:hover {
   background: #cdc637;
   color: #FFF;
 }
-/* line 142, sass/style.scss */
+/* line 174, sass/style.scss */
 #portfolio nav .filters a[role=close] {
   float: right;
   margin: 4px;
 }
-/* line 148, sass/style.scss */
-#portfolio .work-grid {
+
+/* line 182, sass/style.scss */
+.work-grid {
   margin: 0 auto;
+  margin-right: -1.61803rem;
 }
-/* line 151, sass/style.scss */
-#portfolio .work-grid .item {
+/* line 186, sass/style.scss */
+.work-grid .item {
+  display: none;
   float: left;
+  margin-bottom: 0;
   overflow: hidden;
-  padding: 1.61803rem 0 0 1.61803rem;
+  padding: 0 1.61803rem 1.61803rem 0;
   position: relative;
-  width: 29.03444%;
+  width: 25%;
 }
-/* line 157, sass/style.scss */
-#portfolio .work-grid .item a {
+/* line 194, sass/style.scss */
+.work-grid .item:first-child {
+  width: 50%;
+}
+/* line 197, sass/style.scss */
+.work-grid .item a {
   display: block;
   height: 100%;
   position: relative;
@@ -338,22 +407,24 @@ body > header div[role=banner]:hover {
   top: 0;
   left: 0;
 }
-/* line 163, sass/style.scss */
-#portfolio .work-grid .item a img {
+/* line 203, sass/style.scss */
+.work-grid .item a img {
+  display: block;
   position: relative;
   width: 100%;
 }
-/* line 167, sass/style.scss */
-#portfolio .work-grid .item a .label {
-  background: #e95a44;
+/* line 208, sass/style.scss */
+.work-grid .item a .label {
+  background: #262223;
+  font-weight: 100!important;
+  line-height: 1;
   padding: 12px;
   position: absolute;
+  bottom: -100px;
   width: 100%;
-  height: 50px;
-  bottom: -50px;
 }
 
-/* line 181, sass/style.scss */
+/* line 222, sass/style.scss */
 #colophon {
   font-size: 1em;
   color: #646464;

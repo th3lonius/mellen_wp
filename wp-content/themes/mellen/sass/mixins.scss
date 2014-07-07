@@ -1,10 +1,3 @@
-/*TRANSITIONS*/
-@mixin transition ($property, $duration, $easing, $delay) {
-    transition: $property $duration $easing $delay;
-    -moz-transition: $property $duration $easing $delay;
-    -webkit-transition: $property $duration $easing $delay;
-}
-
 /*BREAKPOINTS*/
 $break-small: 500px;
 $break-large: 1024px;
@@ -21,7 +14,8 @@ $break-large: 1024px;
   }
 }
 
-/*ANIMATIONS*/
+/*---------------- ANIMATIONS ----------------*/
+
 @mixin keyframes($animation-name) {
     @-webkit-keyframes $animation-name {
         @content;
@@ -40,19 +34,7 @@ $break-large: 1024px;
     animation: #{$str};
 }
 
-/*BOXSHADOW*/
-@mixin box-shadow( $horiz, $vert, $blur, $spread, $color ){
-  -webkit-box-shadow: $horiz $vert $blur $spread $color;
-  -moz-box-shadow: $horiz $vert $blur $spread $color;
-  box-shadow: $horiz $vert $blur $spread $color;
-}
-
-/*IMAGEBLUR*/
-@mixin imgblur($radius) {
-	-webkit-filter: blur($radius+px); -moz-filter: blur($radius+px);
-	-o-filter: blur($radius+px); -ms-filter: blur($radius+px);
-	filter: url(images/blur.svg#blur); filter: blur($radius+px); filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='$radius');
-}
+/*---------------- IMAGES ----------------*/
 
 /*IMAGEGRAYSCALE*/
 @mixin grayscale {
@@ -66,4 +48,63 @@ $break-large: 1024px;
     -webkit-filter: grayscale(0%);
 }
 
+/*IMAGEBLUR*/
+@mixin imgblur( $radius ) {
+	-webkit-filter: blur($radius+px); -moz-filter: blur($radius+px);
+	-o-filter: blur($radius+px); -ms-filter: blur($radius+px);
+	filter: url(images/blur.svg#blur); filter: blur($radius+px); filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='$radius');
+}
 
+/*IMAGESCALE*/
+@mixin scale( $size ) {
+	-webkit-transform: scale($size);
+	-moz-transform: scale($size);
+	-o-transform: scale($size);
+	-ms-transform: scale($size);
+	transform: scale($size);
+}
+
+/*---------------- COMMON ----------------*/
+
+/*TRANSLATE*/
+@mixin translate( $X, $Y, $Z:"" ) {
+	-webkit-transform: translate( $X, $Y, unquote($Z) );
+	-moz-transform: translate( $X, $Y, unquote($Z) );
+	-o-transform: translate( $X, $Y, unquote($Z) );
+	-ms-transform: translate( $X, $Y, unquote($Z) );
+	transform: translate( $X, $Y, unquote($Z) );
+}
+
+/*TRANSITIONS*/
+@mixin transition( $property, $duration, $function, $delay:"" ) {
+	-webkit-transition: $property $duration $function unquote($delay);
+	-moz-transition: $property $duration $function unquote($delay);
+	-o-transition: $property $duration $function unquote($delay);
+	-ms-transition: $property $duration $function unquote($delay);
+	transition: $property $duration $function unquote($delay);
+}
+
+/*ROUNDEDEDGES*/
+@mixin border-radius( $radius ) {
+	-webkit-border-radius: $radius+px;
+	-moz-border-radius: $radius+px;
+	-o-border-radius: $radius+px;
+	-ms-border-radius: $radius+px;
+	border-radius: $radius+px;
+}
+
+/*BOXSHADOW*/
+@mixin box-shadow( $horiz, $vert, $blur, $spread, $color ){
+  -webkit-box-shadow: $horiz $vert $blur $spread $color;
+  -moz-box-shadow: $horiz $vert $blur $spread $color;
+  box-shadow: $horiz $vert $blur $spread $color;
+}
+
+/*CLEARFLOAT*/
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

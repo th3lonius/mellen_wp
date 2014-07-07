@@ -17,7 +17,7 @@
     <nav>
 		<ul class="filters">
 			<?php $categories = get_categories(); ?>
-			<li><span class="filter active" data-filter="all">All</span></li>
+			<li><span class="filter active" data-filter="mix_all">All</span></li>
 			
 			<?php
 			foreach($categories as $category)

@@ -6,7 +6,7 @@ $ms-ratio: $golden;
 
 h1, h2, h3, h4, h5 {
 	font-family: $titleface;
-	font-weight: 700;
+	font-weight: 400;
 }
 
 h1 {
@@ -30,6 +30,21 @@ h5 {
 }
 
 p {
+	color: hsl(345, 6%, 14%);
 	font-family: $displayface;
 	font-size: ms(1);
+	font-weight: 100;
+	margin-bottom: ms(2);
+}
+
+ul {
+	margin-bottom: ms(2);
+}
+
+li {
+	color: hsl(345, 6%, 14%);
+	font-family: $displayface;
+	font-size: ms(1);
+	font-weight: 100;
+	margin-bottom: ms(1);
 }
