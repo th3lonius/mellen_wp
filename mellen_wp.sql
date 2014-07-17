@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 07, 2014 at 09:06 PM
+-- Generation Time: Jul 17, 2014 at 02:54 PM
 -- Server version: 5.6.14
 -- PHP Version: 5.5.6
 
@@ -109,7 +109,7 @@ CREATE TABLE IF NOT EXISTS `wp_options` (
   `autoload` varchar(20) NOT NULL DEFAULT 'yes',
   PRIMARY KEY (`option_id`),
   UNIQUE KEY `option_name` (`option_name`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=328 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=344 ;
 
 --
 -- Dumping data for table `wp_options`
@@ -211,9 +211,9 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (93, 'widget_archives', 'a:2:{i:2;a:3:{s:5:"title";s:0:"";s:5:"count";i:0;s:8:"dropdown";i:0;}s:12:"_multiwidget";i:1;}', 'yes'),
 (94, 'widget_meta', 'a:2:{i:2;a:1:{s:5:"title";s:0:"";}s:12:"_multiwidget";i:1;}', 'yes'),
 (95, 'sidebars_widgets', 'a:3:{s:19:"wp_inactive_widgets";a:0:{}s:11:"home_slider";a:6:{i:0;s:8:"search-2";i:1;s:14:"recent-posts-2";i:2;s:17:"recent-comments-2";i:3;s:10:"archives-2";i:4;s:12:"categories-2";i:5;s:6:"meta-2";}s:13:"array_version";i:3;}', 'yes'),
-(96, 'cron', 'a:5:{i:1404762780;a:1:{s:20:"wp_maybe_auto_update";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1404771493;a:1:{s:30:"wp_scheduled_auto_draft_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1404771622;a:3:{s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1404771644;a:1:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}s:7:"version";i:2;}', 'yes'),
-(98, '_site_transient_update_core', 'O:8:"stdClass":4:{s:7:"updates";a:1:{i:0;O:8:"stdClass":10:{s:8:"response";s:6:"latest";s:8:"download";s:59:"https://downloads.wordpress.org/release/wordpress-3.9.1.zip";s:6:"locale";s:5:"en_US";s:8:"packages";O:8:"stdClass":5:{s:4:"full";s:59:"https://downloads.wordpress.org/release/wordpress-3.9.1.zip";s:10:"no_content";s:70:"https://downloads.wordpress.org/release/wordpress-3.9.1-no-content.zip";s:11:"new_bundled";s:71:"https://downloads.wordpress.org/release/wordpress-3.9.1-new-bundled.zip";s:7:"partial";b:0;s:8:"rollback";b:0;}s:7:"current";s:5:"3.9.1";s:7:"version";s:5:"3.9.1";s:11:"php_version";s:5:"5.2.4";s:13:"mysql_version";s:3:"5.0";s:11:"new_bundled";s:3:"3.8";s:15:"partial_version";s:0:"";}}s:12:"last_checked";i:1404728492;s:15:"version_checked";s:5:"3.9.1";s:12:"translations";a:0:{}}', 'yes'),
-(103, '_site_transient_update_themes', 'O:8:"stdClass":4:{s:12:"last_checked";i:1404728495;s:7:"checked";a:1:{s:6:"mellen";s:3:"1.0";}s:8:"response";a:0:{}s:12:"translations";a:0:{}}', 'yes'),
+(96, 'cron', 'a:5:{i:1404849180;a:1:{s:20:"wp_maybe_auto_update";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1404857893;a:1:{s:30:"wp_scheduled_auto_draft_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1404858022;a:3:{s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1404858044;a:1:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}s:7:"version";i:2;}', 'yes'),
+(98, '_site_transient_update_core', 'O:8:"stdClass":4:{s:7:"updates";a:1:{i:0;O:8:"stdClass":10:{s:8:"response";s:6:"latest";s:8:"download";s:59:"https://downloads.wordpress.org/release/wordpress-3.9.1.zip";s:6:"locale";s:5:"en_US";s:8:"packages";O:8:"stdClass":5:{s:4:"full";s:59:"https://downloads.wordpress.org/release/wordpress-3.9.1.zip";s:10:"no_content";s:70:"https://downloads.wordpress.org/release/wordpress-3.9.1-no-content.zip";s:11:"new_bundled";s:71:"https://downloads.wordpress.org/release/wordpress-3.9.1-new-bundled.zip";s:7:"partial";b:0;s:8:"rollback";b:0;}s:7:"current";s:5:"3.9.1";s:7:"version";s:5:"3.9.1";s:11:"php_version";s:5:"5.2.4";s:13:"mysql_version";s:3:"5.0";s:11:"new_bundled";s:3:"3.8";s:15:"partial_version";s:0:"";}}s:12:"last_checked";i:1404826749;s:15:"version_checked";s:5:"3.9.1";s:12:"translations";a:0:{}}', 'yes'),
+(103, '_site_transient_update_themes', 'O:8:"stdClass":4:{s:12:"last_checked";i:1404826751;s:7:"checked";a:1:{s:6:"mellen";s:3:"1.0";}s:8:"response";a:0:{}s:12:"translations";a:0:{}}', 'yes'),
 (104, '_transient_random_seed', 'cec3c323fb8568b7c39cdc677cdc1c56', 'yes'),
 (105, 'auth_key', 'bb)zuh)fSRQvOjP(yiz4-%T[T8?8lUo_+iA<gNL<.)}M~V=4.Z}VCIWQ+2Soa|]/', 'yes'),
 (106, 'auth_salt', '39dv2z!Ev,Sop:~J`Pz|guCKUNzV8/y^d(,SPO^IHk(j,EsPWnEzL;;WQ4}jtsE[', 'yes'),
@@ -255,9 +255,9 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (303, '_transient_timeout_dash_4077549d03da2e451c8b5f002294ff51', '1404726931', 'no'),
 (304, '_transient_dash_4077549d03da2e451c8b5f002294ff51', '<div class="rss-widget"><ul><li><a class=''rsswidget'' href=''http://wordpress.org/news/2014/05/wordpress-3-9-1/''>WordPress 3.9.1 Maintenance Release</a> <span class="rss-date">May 8, 2014</span><div class="rssSummary">After three weeks and more than 9 million downloads of WordPress 3.9, we’re pleased to announce that WordPress 3.9.1 is now available. This maintenance release fixes 34 bugs in 3.9, including numerous fixes for multisite networks, customizing widgets while previewing themes, and the updated visual editor. We’ve also made some improvements to the new audio/vi</div></li></ul></div><div class="rss-widget"><ul><li><a class=''rsswidget'' href=''http://wordpress.tv/2014/07/06/rachel-baker-put-your-content-to-rest-with-wp-api/'' title=''''>WordPress.tv: Rachel Baker: Put Your Content to REST With WP-API</a></li><li><a class=''rsswidget'' href=''http://wordpress.tv/2014/07/05/jesse-friedman-ux-real-time-site-personalization/'' title=''''>WordPress.tv: Jesse Friedman: UX Real-Time Site Personalization</a></li><li><a class=''rsswidget'' href=''http://wordpress.tv/2014/07/05/stacy-kvernmo-check-and-double-check-internal-qa-is-vital/'' title=''''>WordPress.tv: Stacy Kvernmo: Check and Double Check: Internal QA is Vital</a></li></ul></div><div class="rss-widget"><ul><li class=''dashboard-news-plugin''><span>Popular Plugin:</span> <a href=''http://wordpress.org/plugins/woocommerce/'' class=''dashboard-news-plugin-link''>WooCommerce - excelling eCommerce</a>&nbsp;<span>(<a href=''plugin-install.php?tab=plugin-information&amp;plugin=woocommerce&amp;_wpnonce=3592e3903d&amp;TB_iframe=true&amp;width=600&amp;height=800'' class=''thickbox'' title=''WooCommerce - excelling eCommerce''>Install</a>)</span></li></ul></div>', 'no'),
 (317, '_transient_is_multi_author', '0', 'yes'),
-(325, '_site_transient_timeout_theme_roots', '1404730293', 'yes'),
-(326, '_site_transient_theme_roots', 'a:1:{s:6:"mellen";s:7:"/themes";}', 'yes'),
-(327, '_site_transient_update_plugins', 'O:8:"stdClass":3:{s:12:"last_checked";i:1404728494;s:8:"response";a:1:{s:43:"custom-post-type-ui/custom-post-type-ui.php";O:8:"stdClass":7:{s:2:"id";s:5:"13183";s:4:"slug";s:19:"custom-post-type-ui";s:6:"plugin";s:43:"custom-post-type-ui/custom-post-type-ui.php";s:11:"new_version";s:5:"0.8.3";s:14:"upgrade_notice";s:35:"Dashicon support. FINALLY. REJOICE!";s:3:"url";s:50:"https://wordpress.org/plugins/custom-post-type-ui/";s:7:"package";s:68:"https://downloads.wordpress.org/plugin/custom-post-type-ui.0.8.3.zip";}}s:12:"translations";a:0:{}}', 'yes');
+(341, '_site_transient_timeout_theme_roots', '1404828548', 'yes'),
+(342, '_site_transient_theme_roots', 'a:1:{s:6:"mellen";s:7:"/themes";}', 'yes'),
+(343, '_site_transient_update_plugins', 'O:8:"stdClass":3:{s:12:"last_checked";i:1404826750;s:8:"response";a:1:{s:43:"custom-post-type-ui/custom-post-type-ui.php";O:8:"stdClass":7:{s:2:"id";s:5:"13183";s:4:"slug";s:19:"custom-post-type-ui";s:6:"plugin";s:43:"custom-post-type-ui/custom-post-type-ui.php";s:11:"new_version";s:5:"0.8.3";s:14:"upgrade_notice";s:35:"Dashicon support. FINALLY. REJOICE!";s:3:"url";s:50:"https://wordpress.org/plugins/custom-post-type-ui/";s:7:"package";s:68:"https://downloads.wordpress.org/plugin/custom-post-type-ui.0.8.3.zip";}}s:12:"translations";a:0:{}}', 'yes');
 
 -- --------------------------------------------------------
 
@@ -466,7 +466,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (191, 53, '_images', 'field_53b9c6dd190ea'),
 (192, 55, 'rule', 'a:5:{s:5:"param";s:9:"post_type";s:8:"operator";s:2:"==";s:5:"value";s:4:"post";s:8:"order_no";i:0;s:8:"group_no";i:0;}'),
 (193, 60, '_edit_last', '1'),
-(194, 60, '_edit_lock', '1404686071:1'),
+(194, 60, '_edit_lock', '1404826605:1'),
 (195, 61, '_wp_attached_file', '2014/07/gears_brand.jpg'),
 (196, 61, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:800;s:6:"height";i:453;s:4:"file";s:23:"2014/07/gears_brand.jpg";s:5:"sizes";a:2:{s:9:"thumbnail";a:4:{s:4:"file";s:23:"gears_brand-400x400.jpg";s:5:"width";i:400;s:6:"height";i:400;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:23:"gears_brand-300x169.jpg";s:5:"width";i:300;s:6:"height";i:169;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:10:{s:8:"aperture";i:0;s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";i:0;s:9:"copyright";s:0:"";s:12:"focal_length";i:0;s:3:"iso";i:0;s:13:"shutter_speed";i:0;s:5:"title";s:0:"";}}'),
 (197, 62, '_wp_attached_file', '2014/07/listen_brand.jpg'),
