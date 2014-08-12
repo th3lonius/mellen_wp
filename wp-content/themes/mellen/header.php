@@ -22,7 +22,7 @@
 
 <body <?php body_class(); ?>>
     
-	<header>
+    <header>
         <nav>
             <ul class="main-menu">
                 <li class="home"><a href="<?php echo site_url(); ?>">Home</a></li>
@@ -33,5 +33,3 @@
             </ul>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
-
-<img src="<?php bloginfo('template_directory'); ?>/images/brand.png" role="banner" class="banner"/>

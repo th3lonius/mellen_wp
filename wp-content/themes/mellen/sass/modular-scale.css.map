@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "file": "",
-  "sources": ["modular-scale.scss","modular-scale/_ratios.scss","modular-scale/_tests.scss","modular-scale/_pow.scss","modular-scale/_calc.scss","modular-scale/_generate-list.scss","modular-scale/_sort-list.scss","modular-scale/_function.scss","modular-scale/_function-list.scss"],
-  "names": [],
-  "mappings": ""
-}

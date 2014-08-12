@@ -23,7 +23,6 @@ article {
     @extend %clearfix;
     margin-top: 1px;
     position: relative;
-	height: 100%;
     width: 100%;
 }
 
@@ -68,15 +67,17 @@ body > header {
     @include box-shadow(0, 2px, 5px, 0, rgba(0,0,0,0.3));
 	@include transition( top, 0.5s, ease );
     background: #FFF;
-    position: fixed;
+    position: relative;
 	text-align: center;
-    top: 0; left: 0; right: 0;
-	width: 100%; height: $headerheight;
+	width: 100%;
     z-index: 9999;
 	img {
 		width: 50%;
 	}
     nav {
+        position: absolute;
+        top: 50%; left: 0;
+        -webkit-transform: translateY(-50%);
         ul {
 			@extend %clearfix;
 			li {
@@ -95,16 +96,12 @@ body > header {
     }
 }
 
-.nav-up {
-    top: -40px;
+.document_header {
+    
 }
 
-.banner {
-	left: 50%; top: 50%;
-	position: absolute;
-	width: 100px;
-	z-index: 999999;
-	-webkit-transform: translate(-50%, -50%);
+.nav-up {
+    top: -40px;
 }
 
 /*MAIN PAGE*/
@@ -118,7 +115,6 @@ body > header {
 	}
 	&::after {
 		content: "";
-		background-image: url(images/pattern-epic.png);
 		display: block;
 		position: absolute;
 		top: 0; bottom: 0; left: 0; right: 0;

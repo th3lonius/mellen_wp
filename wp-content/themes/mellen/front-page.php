@@ -1,5 +1,12 @@
 <?php get_header(); ?>
 
+<article class="document_header">
+
+    <p>Welcome to Creative Mellen, a design firm focusing on growing brands to be more memorable, meaningful, and beautiful.</p>
+
+
+</article>
+
 <!-- #FEATURES -->
 <article id="features">
         
@@ -32,12 +39,11 @@ if( $image ) {
  
 ?>
 
-
             <?php endwhile; ?>
 
         <?php endif; ?>
         
-        </section>
+    </section>
         
 </article>
 
@@ -46,7 +52,7 @@ if( $image ) {
 <article id="portfolio">
     
     <header>
-	    <h3>Portfolio</h3>
+	    <h1>Portfolio</h1>
         <?php
 
             $args = array(
